@@ -1,0 +1,146 @@
+:root {
+  --primary: #00a9ff;
+}
+.container {
+  display: flex;
+  justify-content: end;
+  padding: 0rem 5%;
+}
+.detail {
+  position: fixed;
+  top: 7rem;
+  left: 5%;
+  width: 33%;
+}
+.detail h1 {
+  margin-bottom: 1rem;
+  width: 70%;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+#desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.detail ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 60%;
+}
+.detail ul li {
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  width: fit-content;
+  background-color: var(--primary);
+  color: white;
+}
+aside {
+  box-sizing: border-box;
+  border-left: 1px solid lightgray;
+  padding: 2.5rem 0 2.5rem 2.5rem;
+  width: 62%;
+}
+aside img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+}
+aside h2 {
+  margin: 1rem 0;
+}
+.card-box {
+  display: grid;
+  grid-template-rows: 13rem;
+  gap: 1rem;
+  border-top: 1px solid lightgray;
+  padding: 1rem 0;
+  width: 100%;
+}
+.card {
+  display: flex;
+  gap: 1rem;
+  box-sizing: border-box;
+  border: 2.5px solid #ececec;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+aside .card img {
+  border-radius: 0.7rem;
+  width: 30%;
+  height: 12rem;
+  object-fit: cover;
+}
+.card .info {
+  padding: 0.3rem;
+  width: 70%;
+}
+.card .info h3 {
+  font-weight: 500;
+}
+.card .info .wrapper {
+  display: flex;
+  margin-top: 0.5rem;
+  border-top: 1px solid lightgray;
+}
+.wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 50%;
+  height: fit-content;
+}
+.wrapper ul li {
+  border-radius: 999px;
+  padding: 0.1rem 0.7rem;
+  background-color: #00a9ff;
+  color: white;
+}
+.wrapper .booking {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 0.5rem;
+  width: 50%;
+  text-align: end;
+}
+.booking a {
+  place-self: end;
+  border-radius: 0.7rem;
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  background-color: var(--primary);
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .detail {
+    width: 13%;
+  }
+}
+
+@media only screen and (max-width: 758px) {
+  .container {
+    flex-direction: column;
+  }
+  .detail {
+    position: static;
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+    border: none;
+    padding: 2.5rem 0;
+  }
+}

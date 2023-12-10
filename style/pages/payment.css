@@ -1,0 +1,137 @@
+:root {
+  --primary: #00a9ff;
+}
+.container {
+  display: flex;
+  gap: 1.5rem;
+  margin: 3.5rem 15%;
+}
+.wrapper {
+   width: 65%;
+}
+.info {
+  border: 2px solid #ececec;
+  border-radius: 0.7rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.info h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+.info .title {
+  font-weight: 500;
+}
+.info .des-card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: 0.2rem;
+  border-top: 1px solid lightgray;
+  padding: 0.5rem 0;
+}
+.info .acc-card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  row-gap: 0.2rem;
+  border-top: 1px solid lightgray;
+  padding: 0.5rem 0;
+}
+.col-span {
+  grid-column: span 2 / span 2;
+}
+.self-end {
+  text-align: end;
+}
+.tag-label {
+   margin: 2rem 0 1rem 0;
+   font-weight: 600;
+   color: var(--primary);
+}
+.payment-method {
+  display: flex;
+  align-items: center;
+   margin: 0.7rem 0;
+   border: 2px solid #ececec;
+   padding: 0 0.5rem;
+   border-radius: 0.7rem;
+   background-color: white;
+   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.payment-method label {
+   display: block;
+   padding: 1rem;
+   width: 100%;
+   cursor: pointer;
+}
+.payment-method span {
+  color: var(--primary);
+}
+.bill {
+  box-sizing: border-box;
+  border: 2px solid #ececec;
+  border-radius: 0.7rem;
+  padding: 1.5rem;
+  width: 35%;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+#summary {
+   border-radius: 0.5rem;
+  padding: 0.7rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #eaeaea;
+}
+.bill-detail {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   row-gap: 0.5rem;
+   margin: 0.7rem 0 0 0;
+}
+.bill-detail input {
+   margin: 1rem 0;
+   border: 2px solid var(--primary);
+   padding: 1rem;
+   font-size: 1rem;
+   text-transform: uppercase;
+}
+.total-amount {
+   display: flex;
+   justify-content: space-between;
+   margin: 0.7rem 0 0 0;
+   border-top: 2px dashed lightgray;
+   border-bottom: 2px dashed lightgray;
+   padding: 0.7rem 0;
+   font-weight: 600;
+}
+.bill-detail a {
+   margin-top: 1rem;
+   border-radius: 0.5rem;
+   padding: 1rem;
+   background-color: var(--primary);
+   font-weight: 600;
+   text-align: center;
+   color: white;
+}
+.bill-detail .term {
+   font-size: 0.825rem;
+   line-height: 1.25rem;
+   color: #bbbbbb;
+}
+
+
+@media only screen and (max-width: 758px) {
+  .container {
+    flex-direction: column;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .bill {
+    width: 100%;
+  }
+}

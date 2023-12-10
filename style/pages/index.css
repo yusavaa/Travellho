@@ -1,0 +1,187 @@
+:root {
+  --primary: #00a9ff;
+}
+.container-hero {
+  border-radius: 1rem;
+  padding: 5% 15%;
+  background-image: url("../../assets/hero2.jpg");
+  background-position: center;
+  background-position-y: 0px;
+  animation: zoomAnimation 10s infinite alternate;
+}
+@keyframes zoomAnimation {
+  from {
+    background-size: 110%;
+  }
+  to {
+    background-size: 115%;
+  }
+}
+.hero {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
+.info {
+  width: 47%;
+  color: white;
+}
+.info h3 {
+  font-weight: 600;
+}
+.tagline {
+  margin-bottom: 2.25rem;
+  font-weight: 600;
+  color: inherit;
+}
+.tagline span {
+  color: white;
+}
+.info p {
+  color: white;
+}
+#package-sign {
+  position: absolute;
+  border-radius: 999px;
+  padding: 0.2rem 1rem;
+  right: 50%;
+  background-color: white;
+  font-weight: 500;
+  transform: translateX(50%);
+}
+.package-wrapper {
+  border: 2px solid lightgray;
+  border-radius: 999px;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 1rem;
+  width: 80%;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.package-form {
+  display: grid;
+  grid-template-columns: 20% 20% 23% 23% 14%;
+  width: 100%;
+}
+.column {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.column span {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.2rem;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.input {
+  width: 100%;
+}
+.input label {
+  margin-left: 0.2rem;
+  font-size: 0.875rem;
+  color: white;
+}
+.input select,
+.column .input input {
+  margin-top: 0.2rem;
+  border: none;
+  width: 90%;
+  font-size: 1rem;
+  background: none;
+  color: white;
+}
+.input input {
+  width: 88%;
+  font-size: 0.875rem;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  appearance: none;
+  background: url("../../assets/arrow.png");
+  background-size: cover;
+}
+.package-form button {
+  justify-self: end;
+  border: none;
+  border-radius: 999px;
+  width: 5rem;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+.package-form button:hover {
+  background-color: #33bbff;
+}
+
+.container-content {
+  padding: 5% 15%;
+}
+.gallery {
+  display: grid;
+  grid-template-rows: 15rem 15rem;
+  gap: 1rem;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.row img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-large {
+  width: 60%;
+  height: 100%;
+}
+.img-small {
+  width: 40%;
+  height: 100%;
+}
+.row p {
+  position: relative;
+  top: -50px;
+  right: -20px;
+  color: white;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .hero {
+    height: 25vh;
+  }
+  @keyframes zoomAnimation {
+    from {
+      background-size: 130%;
+    }
+    to {
+      background-size: 135%;
+    }
+  }
+  .info {
+    width: 80%;
+  }
+  .package-wrapper {
+    border-radius: 1rem;
+  }
+  .package-form {
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+    row-gap: 1rem;
+  }
+  .column .input input,
+  .input select {
+    width: 100%;
+  }
+  .package-form button {
+    grid-column: span 2 / span 2;
+    width: 100%;
+    height: 2rem;
+  }
+}

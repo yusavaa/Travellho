@@ -1,0 +1,101 @@
+a {
+   font-size: 0.875rem;
+   text-decoration: none;
+   color: inherit;
+}
+header {
+   position: sticky;
+   top: 0;
+   z-index: 999;
+   display: grid;
+   grid-template-columns: 25% 50% 25%;
+   align-items: baseline;
+   padding: 1.25rem 5%;
+   background-color: white;
+   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+header h3 {
+   font-weight: bold;
+}
+nav {
+   display: flex;
+   justify-content: space-evenly;
+}
+nav a {
+   padding: 0.4rem;
+}
+nav a:hover, #signin:hover {
+   color: #00A9FF;
+}
+nav a::after, #signin::after {
+   content: '';
+   display: block;
+   border-bottom: 0.125rem solid #00A9FF;
+   padding-bottom: 0.2rem;
+   transform: scaleX(0);
+   transition: 0.2s linear;
+}
+nav a:hover::after, #signin:hover::after {
+   transform: scaleX(0.8);
+}
+.button {
+   display: flex;
+   gap: 1.5rem;
+   justify-content: end;
+}
+.to-profile {
+   display: flex;
+   align-items: center;
+   border-radius: 999px;
+   padding: 0.2rem 1rem;
+   width: fit-content;
+   background-color: #00A9FF;
+   color: white;
+   cursor: pointer;
+}
+#signin {
+   padding: 0.4rem;
+}
+#signup {
+   border-radius: 999px;
+   padding: 0.5rem 1rem;
+   background-color: #00A9FF;
+   color: white;
+}
+#signup:hover {
+   background-color: #33bbff;
+}
+#hamburger {
+   display: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+   header {
+      grid-template-columns: 25% 65% 10%;
+   }
+   nav {
+      position: absolute;
+      top: 110%;
+      right: -100%;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      width: 15rem;
+   }
+   #nav.active {
+      right: 0;
+   }
+   nav a {
+      margin: 1rem;
+   }
+   nav a:hover::after, #signin:hover::after {
+      transform: scaleX(1);
+   }
+   #hamburger {
+      display: block;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+   }
+}

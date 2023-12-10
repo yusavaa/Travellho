@@ -1,0 +1,108 @@
+aside {
+  padding: 0.5rem 5% 0.5rem 0.5rem;
+  width: 25%;
+}
+.progress {
+  box-sizing: border-box;
+  position: fixed;
+  top: 9.5rem;
+  right: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 1rem 0 1rem 1rem;
+  width: 23.5%;
+  height: 70vh;
+  background-color: white;
+}
+.progress-step {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 10% 20% 10% 20% 10% 20% 10%;
+  border-radius: 1rem;
+  width: 100%;
+  height: 90%;
+}
+.progress .step-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary);
+  color: white;
+}
+.progress .vertical-line::before {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 2px;
+  height: 100%;
+  background-color: var(--primary);
+}
+.progress h3 {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+.progress .progress-card {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 2.5px solid #ececec;
+  padding: 0.2rem;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.progress .progress-card img {
+  border-radius: 0.3rem;
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+}
+.progress-card .info {
+  padding: 0 0.7rem;
+}
+.tag-name {
+  margin-bottom: 0.7vh;
+  font-weight: 600;
+  width: 11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.progress-button {
+  gap: 0.5rem;
+  border-top: 1px solid lightgray;
+  width: 85%;
+  height: 20%;
+}
+.progress-button .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--primary);
+  color: white;
+}
+.progress-button .payment-button {
+  box-sizing: border-box;
+  border: 2px solid var(--primary);
+  background-color: white;
+  color: inherit;
+}
+
+@media only screen and (max-width: 1366px) {
+  .progress {
+    height: 50vh;
+  }
+}

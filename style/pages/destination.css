@@ -1,0 +1,54 @@
+:root {
+  --primary: #00a9ff;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+main {
+  box-sizing: border-box;
+  padding: 2.5rem 0 7rem 0;
+  width: 75%;
+  border-right: 1px solid lightgray;
+}
+main h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.card-box {
+  display: grid;
+  grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+  gap: 2%;
+  border-top: 1px solid lightgray;
+  padding: 0.5rem;
+}
+
+@media only screen and (max-width: 1366px) {
+  .card-box {
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+
+@media only screen and (max-width: 758px) {
+  .card-box {
+    grid-template-columns: 49% 49%;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  main {
+    width: 100%;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card-box {
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+}
